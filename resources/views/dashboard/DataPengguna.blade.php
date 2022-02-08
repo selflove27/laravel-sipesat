@@ -42,21 +42,15 @@
       <form action="{{ url('/create-data-pengguna') }}" method="post">
             @csrf
                         <label class="text-bold-600" for="username">Nama Lengkap <span class="text-danger">*</span></label>
-                        <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap" required autofocus>
+                        <input type="text" name="name" class="form-control" placeholder="Nama Lengkap" required autofocus>
                     </div>
-                    <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
+                    <div class="form-group mb-50">
+                        <label class="text-bold-600" for="username">Role <span class="text-danger">*</span></label>
+                        <input type="text" name="role" class="form-control" placeholder="Email" required>
+                    </div>
                     <div class="form-group mb-50">
                         <label class="text-bold-600" for="username">Username <span class="text-danger">*</span></label>
-                        <input type="text" name="nomor_telepon" class="form-control" placeholder="Nomor Telepon" required>
+                        <input type="text" name="username" class="form-control" placeholder="Nomor Telepon" required>
                     </div>
                     <div class="form-group mb-2">
                         <label class="text-bold-600" for="password">Kata Sandi <span class="text-danger">*</span></label>
@@ -101,6 +95,7 @@
 								<td>{{$data->role}}</td>
 								<td>{{$data->name}}</td>
 								<td>{{$data->username}}</td>
+                                <td>{{$data->password}}</td>
 								<td></td>
 								<td>
 									<div class="btn-group btn-group-sm">
