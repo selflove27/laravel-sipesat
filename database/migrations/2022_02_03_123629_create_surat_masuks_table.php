@@ -16,6 +16,7 @@ class CreateSuratMasuksTable extends Migration
         Schema::create('surat_masuks', function (Blueprint $table) {
             $table->id();
             $table->biginteger('no_agenda');
+            
             $table->string('nomor_suratmasuk');
             $table->date('tgl_suratmasuk');
             $table->string('pengirim');

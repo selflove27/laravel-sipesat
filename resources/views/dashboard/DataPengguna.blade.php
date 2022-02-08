@@ -22,6 +22,57 @@
 		<div class="col-lg-6 col-5 text-right">
 		<button class="btn btn-sm btn-success createButton">Tambah Akun</button>
             </div>
+            <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <div class="form-group mb-50">
+      <form action="{{ url('/create-data-pengguna') }}" method="post">
+            @csrf
+                        <label class="text-bold-600" for="username">Nama Lengkap <span class="text-danger">*</span></label>
+                        <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap" required autofocus>
+                    </div>
+                    <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+                    <div class="form-group mb-50">
+                        <label class="text-bold-600" for="username">Username <span class="text-danger">*</span></label>
+                        <input type="text" name="nomor_telepon" class="form-control" placeholder="Nomor Telepon" required>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label class="text-bold-600" for="password">Kata Sandi <span class="text-danger">*</span></label>
+                        <input type="password" name="password" class="form-control" placeholder="***********" required>
+                    </div>
+                    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
 	</div>
 	<div class="col-md-12">
 	</div>
@@ -65,7 +116,8 @@
 		</div>
 	</div>
 
-	<div class="modal fade show" id="createModal">
+</div>
+	<!-- <div class="modal fade show" id="createModal">
         <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
             <div class="modal-header bg-success">
@@ -76,7 +128,8 @@
             </div>
             <form action="{{ url('/data-pengguna') }}" method="post">
             @csrf
-                <div class="modal-body">
+-->
+            <!-- <div class="modal-body"
                     <div class="form-group mb-50">
                         <label class="text-bold-600" for="username">Nama Lengkap <span class="text-danger">*</span></label>
                         <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap" required autofocus>
@@ -108,6 +161,7 @@
                     <span class="d-none d-sm-block">Simpan</span>
                     </button>
                 </div>
+				-->
             </form>
             </div>
         </div>

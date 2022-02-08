@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\DashboardController;
-
+use App\Http\Controllers\PenggunaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +33,7 @@ Route::get('/disposisi', function () {
 });
 
 Route::get('/data-pengguna', [DashboardController::class, 'index']);
+Route::post('/create-data-pengguna', [PenggunaController::class, 'create']);
 
 Route::post('/login', [LoginController::class, 'login']);
 Route::get('/login', [LoginController::class, 'index']);
