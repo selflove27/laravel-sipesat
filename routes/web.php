@@ -5,6 +5,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PenggunaController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\SuratMasukController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,10 +22,6 @@ Route::get('/dashboard', function () {
     return view('dashboard.dashboard');
 });
 
-Route::get('/surat-masuk', function () {
-    return view('dashboard.SuratMasuk');
-});
-
 Route::get('/surat-keluar', function () {
     return view('dashboard.SuratKeluar');
 });
@@ -34,6 +32,11 @@ Route::get('/disposisi', function () {
 
 Route::get('/data-pengguna', [DashboardController::class, 'index']);
 Route::post('/create-data-pengguna', [PenggunaController::class, 'create']);
+Route::post('/pengguna/update/{id}', [PenggunaController::class, 'edit']);
+Route::delete('/pengguna/delete/{id}', [PenggunaController::class, 'delete']);
+
+Route::get('/surat-masuk', [SuratMasukController::class, 'index']);
+Route::post('/create-surat-masuk', [SuratMasukController::class, 'create']);
 
 Route::post('/login', [LoginController::class, 'login']);
 Route::get('/login', [LoginController::class, 'index']);
